@@ -1,0 +1,150 @@
+.App {
+    background-color: #3E3B43;
+    .App-header {
+      background-color: #EC2448;
+  
+      > div {
+        max-width: 1400px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0 20px;
+  
+        .App-logo {
+          height: 80px;
+        }
+  
+        ul {
+          li {
+            display: inline-block;
+            margin-right: 40px;
+            a {
+              font-family: monospace;
+              font-size: 1.5rem;
+              color: #fff;
+              text-decoration: none;
+              position: relative;
+              padding-bottom: 5px;
+  
+              &::after {
+                content: '';
+                display: block;
+                width: 0%;
+                height: 2px;
+                background-color: #fff;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                transition: .3s;
+              }
+  
+              &:hover {
+                &::after {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    main {
+      margin: 0 auto;
+      max-width: 1400px;
+      padding: 0 20px;
+    }
+  }
+  
+  .moviesList {
+    > form {
+      margin-bottom: 50px;
+  
+      input {
+        box-sizing: border-box;
+        display: block;
+        border: none;
+        background-color: #eee;
+        border-radius: 10px;
+        padding: 0.5rem 0.8rem;
+  
+        &::placeholder {
+          color: #777;
+        }
+  
+        &:focus {
+          outline: 1px solid lighten(#EC2448, 8);
+        }
+      }
+  
+      button {
+        margin: 10px 0 0 0;
+        background-color: #EC2448;
+        color: white;
+        text-decoration: none;
+        padding: 0.8rem 1.2rem;
+        border-radius: 10px;
+        font-weight: bolder;
+        text-transform: uppercase;
+        position: relative;
+        border: none;
+        transition: 0.2s;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: lighten(#EC2448, 8);
+        }
+      }
+    }
+  
+    > div {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 20px;
+  
+      > a {
+        background-color: #eee;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(black, 0.15);
+        text-decoration: none;
+  
+        * {
+          display: block;
+          transition: 0.2s;
+        }
+  
+        img {
+          border-radius: 10px 10px 0 0;
+          width: 100%;
+          object-fit: cover;
+          object-position: top;
+          height: 350px;
+        }
+  
+        h2 {
+          padding: 0 10px;
+          margin: 5px 0;
+          font-size: 1.2rem;
+          color: black;
+        }
+  
+        p {
+          padding: 0 10px;
+          margin: 5px 0;
+          color: #aaa;
+          font-weight: bold;
+        }
+  
+        &:hover {
+          img {
+            opacity: 0.7;
+          }
+          h2 {
+            color: lighten(#EC2448, 8);
+          }
+        }
+      }
+    }
+  }
+  
