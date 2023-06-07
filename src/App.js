@@ -6,6 +6,8 @@ import axios from 'axios';
 import MovieList from './components/MovieList';
 import './styles/MovieList.scss';
 
+
+
 const HomePage = () => (
   <>
     <MovieList />
@@ -18,11 +20,21 @@ const StreamingServicesPage = () => <h1>Streaming Services Page</h1>;
 const UsersPage = () => <h1>Users Page</h1>;
 
 const App = () => {
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    setLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    setLoggedIn(false);
+  };
+
   return (
     <BrowserRouter>
       <div className="App">
         <header className="App-header">
-          <div>
+          <div className="navbar">
             <a href="/">
               <img src={myLogo} className="App-logo" alt="logo" />
             </a>
@@ -34,13 +46,8 @@ const App = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/login">
-                  Login
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/movies/123">
-                  Movie Details
+                <NavLink to="/Bingelocation">
+                  Bingelocation
                 </NavLink>
               </li>
               <li>
@@ -48,17 +55,17 @@ const App = () => {
                   Profile
                 </NavLink>
               </li>
-              <li>
-                <NavLink to="/streaming">
-                  Streaming Services
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/users">
-                  Users
-                </NavLink>
-              </li>
             </ul>
+            
+            <div className="right-section">
+              {loggedIn ? (
+                <button onClick={handleLogout}>Log Out</button>
+              ) : (
+                <NavLink to="/login">
+                  Log In
+                </NavLink>
+              )}
+            </div>
           </div>
         </header>
 

@@ -49,6 +49,34 @@
         }
       }
     }
+
+    .right-section {
+      margin-left: auto;
+
+      .login-button {
+        font-family: monospace;
+        font-size: 1.5rem;
+        background-color: #EC2448;
+        color: white;
+        text-decoration: none;
+        padding: 0.8rem 1.2rem;
+        border-radius: 10px;
+        font-weight: bolder;
+        text-transform: uppercase;
+        position: relative;
+        border: none;
+        transition: 0.2s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: lighten(#EC2448, 8);
+        }
+      }
+    }
+  
+
+  
+
   
     main {
       margin: 0 auto;

@@ -1,9 +1,10 @@
-import React from 'react';
+import React from "react";
 
 const ProfilePage = () => {
   return (
     <div>
-      {/* Your profile page content */}
+      <h1>Profile Page</h1>
+      {/* Add your profile page content here */}
     </div>
   );
 };
